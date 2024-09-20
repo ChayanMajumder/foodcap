@@ -1,0 +1,662 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  outline: none;
+}
+
+:root {
+  /* Background Color  */
+  --bg-white: #fff;
+  --bg-dark-color: #03262c;
+
+  /* Text Color  */
+  --primary-text: #061738;
+  --secondary-color: #60cd12;
+  --light-color: #e2f6de;
+  --dark-color: #03262c;
+  --text-white: #fff;
+  --text-gray: #dee2e6;
+  --anchor-color: #007aff;
+
+  /* Font Family  */
+  --primary-font: "Barlow Condensed", sans-serif;
+  --scondary-font: "Roboto", sans-serif;
+}
+
+body,
+html {
+  color: var(--primary-text);
+  font-size: 10px;
+  font-weight: 400;
+  font-family: var(--primary-font);
+  scroll-behavior: smooth;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 9rem;
+  line-height: 1.4;
+  font-weight: 600;
+  color: var(--primary-text);
+}
+
+h2 {
+  font-size: 4.7rem;
+  color: var(--primary-text);
+  font-weight: 600;
+  display: inline;
+  text-transform: capitalize;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+h3 {
+  color: var(--text-white);
+  font-size: 3.1rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--primary-text);
+}
+
+h5 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--primary-text);
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  margin-top: 1rem;
+  color: var(--primary-text);
+  font-family: var(--scondary-font);
+}
+
+embed,
+iframe,
+img,
+object {
+  max-width: 100%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a,
+a:active,
+a:focus,
+a:hover,
+button {
+  text-decoration: none;
+  outline: 0;
+}
+
+li a {
+  color: var(--text-white);
+}
+
+a:hover,
+button:hover {
+  -webkit-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+::-webkit-scrollbar {
+  width: 1rem;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-white);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+}
+
+.main-btn {
+  position: relative;
+  color: var(--bg-white);
+  background: linear-gradient(to right, #0f7404, #5cb917);
+  z-index: 1;
+  overflow: hidden;
+  border: 0.2rem solid var(--bg-white);
+  border-radius: 3.5rem;
+  text-transform: uppercase;
+  padding: 1rem 3.5rem;
+  font-weight: 600;
+  font-size: 1.8rem;
+  margin-top: 1.5rem;
+  letter-spacing: 0.2rem;
+}
+.main-btn:hover {
+  background: var(--bg-white);
+  color: var(--secondary-color);
+  border: 0.2rem solid var(--secondary-color);
+}
+
+section {
+  padding: 5rem 0;
+}
+.section-title {
+  font-size: 4rem;
+  font-weight: 600;
+  color: var(--primary-text);
+  text-transform: capitalize;
+  margin-bottom: 2rem;
+}
+.section-subtitle {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--primary-text);
+  font-family: var(--scondary-font);
+  max-width: 40%;
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.about .banner-section,
+.product .banner-section,
+.gallery .banner-section,
+.contact .banner-section {
+  background: url("../images//banner-slide/top-banner.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 17rem;
+  padding-bottom: 10rem;
+  min-height: auto;
+}
+
+.header {
+  position: absolute;
+  width: 100%;
+  top: 2rem;
+  left: 0;
+  z-index: 2;
+}
+.header .navbar {
+  width: 100%;
+  background: #000;
+  padding: 1rem 5rem;
+  border-radius: 2rem;
+}
+.header .navbar-brand {
+  font-size: 3.5rem;
+  color: var(--text-white);
+  font-weight: 600;
+}
+.header .navbar-nav .nav-link {
+  color: var(--text-white);
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 0.5rem 2rem;
+  margin: 0 0.2rem;
+  font-family: var(--primary-font);
+}
+.header .navbar-nav .nav-link:hover,
+.header .navbar-nav .nav-link.active {
+  color: var(--secondary-color);
+}
+.header .navbar-toggler {
+  color: var(--text-white);
+  font-size: 2rem;
+  padding: 1rem;
+}
+.header .navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+.header .header-right span {
+  display: block;
+  color: var(--secondary-color);
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-right: 1rem;
+}
+.header .header-right .phone-no {
+  color: var(--text-white);
+  font-size: 1.6rem;
+}
+.header-scrolled {
+  position: fixed;
+  top: -0.4rem;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 1320px;
+  margin: auto;
+  z-index: 9999;
+  transition: 0.3s all ease-in-out;
+}
+
+/* banner section start  */
+.banner-section {
+  background: url("../images//banner-slide/Banner-1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 90vh;
+}
+.banner-section .carousel-item {
+  padding: 3rem 0;
+  height: 90vh;
+}
+.banner-section .carousel-caption {
+  top: 30%;
+  bottom: 0;
+  left: 3%;
+  right: 0;
+  text-align: left;
+  width: 100%;
+}
+.banner-section .carousel-caption h3 {
+  padding: 0.5rem 1.5rem;
+  background: var(--dark-color);
+  display: inline;
+}
+.banner-section .carousel-caption p {
+  max-width: 40rem;
+  margin-bottom: 2rem;
+}
+/* banner section end */
+
+/* features section start  */
+.features-section .features-box {
+  background: transparent;
+  border: 0.15rem solid var(--light-color);
+  padding: 8rem 0;
+  transition: all 0.3s;
+}
+.features-section .features-icon-border {
+  background: transparent;
+  border: 0.2rem solid var(--light-color);
+  border-radius: 50%;
+  padding: 1.3rem;
+  display: inline-block;
+}
+.features-section .features-box .features-icon {
+  height: 6.5rem;
+  width: 6.5rem;
+  background: var(--light-color);
+  margin: auto;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.features-section .features-box .features-icon img {
+  width: 3.7rem;
+}
+.features-section .features-box h3 {
+  margin-top: 1.5rem;
+  color: var(--primary-text);
+}
+.features-section .features-box:hover {
+  background: var(--bg-dark-color);
+  border-color: var(--bg-dark-color);
+}
+.features-section .features-box:hover h3 {
+  color: var(--text-white);
+}
+.features-section .features-box:hover .features-icon-border {
+  border-color: var(--secondary-color);
+}
+/* features section end */
+
+/* Home About Section Start  */
+.landing-about-section {
+  background: url("../images/about/about-banner.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 9rem 0;
+}
+.landing-about-section p {
+  color: var(--primary-text);
+  margin-bottom: 2rem;
+}
+/* Home About Section End */
+
+/* Product section start  */
+.landing-product-section .product-card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border: 0.2rem solid var(--light-color);
+  padding: 2rem 1rem;
+  transition: all 0.3s;
+}
+.landing-product-section .product-card .product-img {
+  margin-bottom: 7rem;
+  text-align: center;
+}
+.landing-product-section .product-card h3 {
+  color: var(--primary-text);
+}
+.landing-product-section .product-card span {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  margin-right: 0.5rem;
+  text-decoration: line-through;
+  transition: a 0.3s;
+}
+.landing-product-section .product-card .product-detail {
+  position: absolute;
+  bottom: -22rem;
+  right: 0;
+  left: 0;
+  text-align: center;
+  padding: 5rem 1rem;
+  background: var(--dark-color);
+  transition: all 0.5s ease;
+}
+.landing-product-section .product-card:hover .product-detail {
+  bottom: 0;
+}
+
+/* Product section end  */
+
+/* Testimonial section start  */
+.testimonial-section {
+  background: var(--light-color);
+  padding-bottom: 8rem;
+}
+.testimonial-section .carousel-indicators {
+  bottom: -6rem;
+}
+.testimonial-section .carousel-indicators button {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background-color: var(--dark-color);
+}
+.testimonial-section .card {
+    background: url('../images/testimonial/testimonial-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: right;
+    padding: 5rem 5rem 5rem 0;
+    /* border-radius: 0.5rem 0.5rem 0; */
+    border: 0.1rem solid transparent;
+}
+.testimonial-section .profile-box {
+    padding: 1.875rem;
+    background-color: var(--dark-color);
+}
+.testimonial-section .profile-box img {
+    border-radius: .625rem 3.125rem;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.testimonial-section .desc-box {
+    padding-left: 2.5rem;
+}
+/* Testimonial section end  */
+/* gallery section start  */
+.gallery-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* gallery modalbox section start  */
+.modal-section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background-color: rgba(0,0,0,0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  padding: 5rem 0;
+  opacity: 0;
+  pointer-events: none; 
+  transition: all 0.5s ease-in-out;
+}
+.modal-section .modal-box {
+  width: 100%;
+  height: 100%;
+}
+.modal-section .model-img-box {
+  height: 100%;
+  width: 100%;
+}
+.modal-section .modal-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.modal-section .close {
+  position: absolute;
+  top: -5rem;
+  right: 5rem;
+  font-size: 10rem;
+  color: var(--text-white);
+  cursor: pointer;
+}
+
+/* gallery modalbox section End  */
+
+
+/* footer section start  */
+.footer-wrapper{
+  /* background: url('../images/footer-bg/footer_bg.png'); */
+  background-color: var(--bg-dark-color);
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 10rem;
+  padding-bottom: 0;
+}
+.footer-wrapper h5 {
+  color: var(--text-white);
+  font-size: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+.footer-wrapper ul li {
+  margin-bottom: 0.5rem;
+  list-style: none;
+}
+.footer-wrapper .company-details {
+  font-size: 1.4rem;
+  color: var(--text-gray);
+}
+.footer-wrapper .contact-info li a{
+  color: var(--text-gray);
+  font-size: 1.6rem;
+}
+.footer-wrapper .link-widget li a,
+.footer-wrapper p {
+  color: var(--text-gray);
+  font-size: 1.6rem;
+  padding-left: 1.5rem;
+  position: relative;
+  -webkit-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
+.footer-wrapper .link-widget li a:hover {
+  margin-left: .625rem;
+  color: var(--secondary-color);
+}
+.footer-wrapper .social-network a {
+  width: 3.5rem;
+  height: 3.5rem;
+  line-height: 3.2rem;
+  margin: .5rem;
+  font-size: 1.4rem;
+  display: inline-block;
+  border: .125rem solid var(--text-gray);
+  color: var(--text-gray);
+  text-align: center;
+  border-radius: 100%;
+  -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.footer-wrapper .social-network a:hover {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  color: var(--text-white);
+  box-shadow: 0 0.625rem 0.9375rem 0 rgb(0 0 0 / 10%);
+  transform: translateY(-0.1875rem);
+}
+.footer-wrapper .form-control {
+  font-size: 2rem;
+  color: var(--text-white);
+}
+.footer-wrapper .form-control::placeholder {
+  color: var(--text-gray);
+}
+.footer-wrapper .form-control:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+  box-shadow: none;
+}
+.footer-wrapper .copyright-section {
+  background-color: var(--secondary-color);
+  text-align: center;
+  margin-top: 5rem;
+}
+.footer-wrapper .copyright-section p{
+  margin-top: 0;
+  padding: 3rem 0;
+  line-height: 0;
+}
+.footer-wrapper .copyright-section a {
+  color: var(--primary-text);
+  font-weight: 600;
+}
+/* footer section end */
+
+
+
+
+
+/* About page start  */
+
+/* about banner section start  */
+.banner-section {
+  background: url("../images//banner-slide/Banner-1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 80vh;
+}
+.banner-section .banner-contant {
+  height: 80vh;
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about-contant .about-img-box img{
+  border-radius: 1rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.about-contant .about-text h3 {
+  padding: 0.5rem 2rem;
+  border-radius: 1rem;
+  background-color: var(--dark-color);
+}
+/* about banner section end */
+/* About page end */
+
+
+
+.product-section .product-card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border: 0.2rem solid var(--light-color);
+  padding: 2rem 1rem;
+  transition: all 0.3s;
+}
+.product-section .product-card .product-img {
+  margin-bottom: 7rem;
+  text-align: center;
+}
+.product-section .product-card h3 {
+  color: var(--primary-text);
+}
+.product-section .product-card span {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  margin-right: 0.5rem;
+  text-decoration: line-through;
+  transition: a 0.3s;
+}
+.product-section .product-card .product-detail {
+  position: absolute;
+  bottom: -22rem;
+  right: 0;
+  left: 0;
+  text-align: center;
+  padding: 5rem 1rem;
+  background: var(--dark-color);
+  transition: all 0.5s ease;
+}
+.product-section .product-card:hover .product-detail {
+  bottom: 0;
+}
+
+
+.contact-section {
+  background: var(--light-color);
+}
+.contact-section label {
+  font-size: 1.8rem;
+  color: var(--primary-text);
+}
+.contact-section .form-control {
+  font-size: 1.6rem;
+  color: var(--primary-text);
+}
+.contact-section .form-control::placeholder {
+  color: var(--text-gray);
+}
+.contact-section .form-control:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+  box-shadow: none;
+}
+
